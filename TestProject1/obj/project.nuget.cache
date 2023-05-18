@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "5ii5a6ORA9nOYM1WPF/cSlTT/04hr40K4uT5idj/0DWvPrLgJoi3ZhF/o2cdOWrtNcH0/2oMjdCEiD6R36yQYQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\TestProject1\\TestProject1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\playf\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
+    "C:\\Users\\playf\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\playf\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Users\\playf\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512"
+  ],
+  "logs": []
+}
