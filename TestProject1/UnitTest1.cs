@@ -18,10 +18,10 @@ namespace NST_Test_Task.Tests
             // Arrange
             functionResult.viewModel = viewModel;
             functionResult.isTesting = true;
-            functionResult.X = "2";
-            functionResult.Y = "8";
-            viewModel.CoefficientA = "2";
-            viewModel.CoefficientB = "8";
+            functionResult.X = 2;
+            functionResult.Y = 8;
+            viewModel.CoefficientA = 2;
+            viewModel.CoefficientB = 8;
             viewModel.SelectedCoefficientC = "2";
             viewModel.SelectedFunctionType = "Линейная";
 
@@ -43,10 +43,10 @@ namespace NST_Test_Task.Tests
             // Arrange
             functionResult.viewModel = viewModel;
             functionResult.isTesting = true;
-            functionResult.X = "2";
-            functionResult.Y = "6";
-            viewModel.CoefficientA = "2";
-            viewModel.CoefficientB = "8";
+            functionResult.X = 2;
+            functionResult.Y = 6;
+            viewModel.CoefficientA = 2;
+            viewModel.CoefficientB = 8;
             viewModel.SelectedFunctionType = "Квадратичная";
             viewModel.SelectedCoefficientC = "20";
             
@@ -67,10 +67,10 @@ namespace NST_Test_Task.Tests
             // Arrange
             functionResult.viewModel = viewModel;
             functionResult.isTesting = true;
-            functionResult.X = "2";
-            functionResult.Y = "6";
-            viewModel.CoefficientA = "2";
-            viewModel.CoefficientB = "8";
+            functionResult.X = 2;
+            functionResult.Y = 6;
+            viewModel.CoefficientA = 2;
+            viewModel.CoefficientB = 8;
             viewModel.SelectedFunctionType = "Кубическая";
             viewModel.SelectedCoefficientC = "200";
 
@@ -91,10 +91,10 @@ namespace NST_Test_Task.Tests
             // Arrange
             functionResult.viewModel = viewModel;
             functionResult.isTesting = true;
-            functionResult.X = "2";
-            functionResult.Y = "6";
-            viewModel.CoefficientA = "2";
-            viewModel.CoefficientB = "8";
+            functionResult.X = 2;
+            functionResult.Y = 6;
+            viewModel.CoefficientA = 2;
+            viewModel.CoefficientB = 8;
             viewModel.SelectedFunctionType = "4-ой степени";
             viewModel.SelectedCoefficientC = "2000";
 
@@ -115,10 +115,10 @@ namespace NST_Test_Task.Tests
             // Arrange
             functionResult.viewModel = viewModel;
             functionResult.isTesting = true;
-            functionResult.X = "2";
-            functionResult.Y = "6";
-            viewModel.CoefficientA = "2";
-            viewModel.CoefficientB = "8";
+            functionResult.X = 2;
+            functionResult.Y = 6;
+            viewModel.CoefficientA = 2;
+            viewModel.CoefficientB = 8;
             viewModel.SelectedFunctionType = "4-ой степени";
             viewModel.SelectedCoefficientC = "20000";
 
