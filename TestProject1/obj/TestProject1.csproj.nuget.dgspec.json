@@ -1,14 +1,14 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\TestProject1\\TestProject1.csproj": {}
+    "D:\\LostDotProjects\\nst\\NST_Test_Task\\TestProject1\\TestProject1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\NST_Test_Task\\NST_Test_Task.csproj": {
+    "D:\\LostDotProjects\\nst\\NST_Test_Task\\NST_Test_Task\\NST_Test_Task.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\NST_Test_Task\\NST_Test_Task.csproj",
+        "projectUniqueName": "D:\\LostDotProjects\\nst\\NST_Test_Task\\NST_Test_Task\\NST_Test_Task.csproj",
         "projectName": "NST_Test_Task",
-        "projectPath": "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\NST_Test_Task\\NST_Test_Task.csproj",
+        "projectPath": "D:\\LostDotProjects\\nst\\NST_Test_Task\\NST_Test_Task\\NST_Test_Task.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
@@ -19,14 +19,14 @@
         "net472": {}
       }
     },
-    "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\TestProject1\\TestProject1.csproj": {
+    "D:\\LostDotProjects\\nst\\NST_Test_Task\\TestProject1\\TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\TestProject1\\TestProject1.csproj",
+        "projectUniqueName": "D:\\LostDotProjects\\nst\\NST_Test_Task\\TestProject1\\TestProject1.csproj",
         "projectName": "TestProject1",
-        "projectPath": "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\TestProject1\\TestProject1.csproj",
+        "projectPath": "D:\\LostDotProjects\\nst\\NST_Test_Task\\TestProject1\\TestProject1.csproj",
         "packagesPath": "C:\\Users\\playf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\TestProject1\\obj\\",
+        "outputPath": "D:\\LostDotProjects\\nst\\NST_Test_Task\\TestProject1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\playf\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,8 +43,8 @@
           "net472": {
             "targetAlias": "net472",
             "projectReferences": {
-              "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\NST_Test_Task\\NST_Test_Task.csproj": {
-                "projectPath": "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\NST_Test_Task\\NST_Test_Task.csproj"
+              "D:\\LostDotProjects\\nst\\NST_Test_Task\\NST_Test_Task\\NST_Test_Task.csproj": {
+                "projectPath": "D:\\LostDotProjects\\nst\\NST_Test_Task\\NST_Test_Task\\NST_Test_Task.csproj"
               }
             }
           }

@@ -13,8 +13,8 @@ namespace NST_Test_Task
 {
     public class FunctionResult : INotifyPropertyChanged
     {
-        private string _x;
-        public string X
+        private double _x;
+        public double X
         {
             get { return _x; }
             set
@@ -28,8 +28,8 @@ namespace NST_Test_Task
             }
         }
 
-        private string _y;
-        public string Y
+        private double _y;
+        public double Y
         {
             get { return _y; }
             set
@@ -58,6 +58,7 @@ namespace NST_Test_Task
         }
         public MainViewModel viewModel;
         public bool isTesting = false;
+        //Обновляю результат в столбце f(x,y)
         public void UpdateResult()
         {
             if (!isTesting)
@@ -75,19 +76,20 @@ namespace NST_Test_Task
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        double c = 0, x = 0, y = 0;
+        //Нахожу значение коэффицента C
+        double c = 0;
         private void ParseVariables()
         {
 
             double.TryParse(viewModel.SelectedCoefficientC, out c);
-            double.TryParse(X, out x);
-            double.TryParse(Y, out y);
         }
+        //Возвращаю итоговое значение
         public double CalcFunc(int type)
         {
             ParseVariables();
-            return (viewModel.CoefficientA * Math.Pow(x, type)) + (viewModel.CoefficientB * Math.Pow(y, type - 1)) + c;
+            return (viewModel.CoefficientA * Math.Pow(_x, type)) + (viewModel.CoefficientB * Math.Pow(_y, type - 1)) + c;
         }
+        //Нахожу референс VM в приложении
         private void SetReferenceToViewModel()
         {
             viewModel = Application.Current.MainWindow.DataContext as MainViewModel;

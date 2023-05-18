@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5ii5a6ORA9nOYM1WPF/cSlTT/04hr40K4uT5idj/0DWvPrLgJoi3ZhF/o2cdOWrtNcH0/2oMjdCEiD6R36yQYQ==",
+  "dgSpecHash": "sTgPbJiUbTUSU6706FO2O6noZyYy/k7etBfVxgMG9z6YKgdPBW/hBP+5xyaTfLYYeNt1K9mfLwbisWR8fRoxFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\playf\\source\\repos\\NST_Test_Task\\TestProject1\\TestProject1.csproj",
+  "projectFilePath": "D:\\LostDotProjects\\nst\\NST_Test_Task\\TestProject1\\TestProject1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\playf\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\playf\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
