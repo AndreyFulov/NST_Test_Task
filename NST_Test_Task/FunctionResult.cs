@@ -23,7 +23,6 @@ namespace NST_Test_Task
                 {
                     _x = value;
                     OnPropertyChanged();
-                    UpdateResult();
                 }
             }
         }
@@ -38,7 +37,6 @@ namespace NST_Test_Task
                 {
                     _y = value;
                     OnPropertyChanged();
-                    UpdateResult();
                 }
             }
         }
@@ -65,9 +63,6 @@ namespace NST_Test_Task
             {
                 SetReferenceToViewModel();
             }
-            int type = viewModel.GetTypeOfFunction();
-            double finalResult = CalcFunc(type);
-            Result = finalResult.ToString();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -78,17 +73,6 @@ namespace NST_Test_Task
         }
         //Нахожу значение коэффицента C
         double c = 0;
-        private void ParseVariables()
-        {
-
-            double.TryParse(viewModel.SelectedCoefficientC, out c);
-        }
-        //Возвращаю итоговое значение
-        public double CalcFunc(int type)
-        {
-            ParseVariables();
-            return (viewModel.CoefficientA * Math.Pow(_x, type)) + (viewModel.CoefficientB * Math.Pow(_y, type - 1)) + c;
-        }
         //Нахожу референс VM в приложении
         private void SetReferenceToViewModel()
         {

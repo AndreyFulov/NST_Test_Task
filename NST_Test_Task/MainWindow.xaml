@@ -13,18 +13,18 @@
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
             <TextBlock Text="Коэффицент a: " VerticalAlignment="Center"/>
-            <TextBox Text="{Binding CoefficientA, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Width="100" VerticalAlignment="Center"/> 
+            <TextBox Text="{Binding CoefficientA, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Width="100" VerticalAlignment="Center"/>
             <TextBlock Text="Коэффицент b: " VerticalAlignment="Center" Margin="20,0,0,0"/>
             <TextBox Text="{Binding CoefficientB, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Width="100" VerticalAlignment="Center"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
             <TextBlock Text="Выберите функцию: " VerticalAlignment="Center"/>
-            <ComboBox ItemsSource="{Binding FunctionTypes}" SelectedItem="{Binding SelectedFunctionType}" Width="150" Margin="10,0,0,0">
+            <ListBox ItemsSource="{Binding FunctionTypes}" SelectedItem="{Binding SelectedFunctionType}" Width="150" Margin="10,0,0,0">
                 
-            </ComboBox>
+            </ListBox>
             <TextBlock Text="Коэффицент c: " VerticalAlignment="Center" Margin="20,0,0,0"/>
-            <ComboBox ItemsSource="{Binding CoefficientCValues}" SelectedItem="{Binding SelectedCoefficientC}" Width="100" Margin="10,0,0,0"/>
+            <ComboBox ItemsSource="{Binding CoefficientCValues}" SelectedItem="{Binding SelectedCoefficientC}" Width="121" Margin="10,0,0,0" Height="28"/>
         </StackPanel>
 
         <DataGrid Grid.Row="2" ItemsSource="{Binding FunctionResults}" Margin="10"

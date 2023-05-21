@@ -20,18 +20,18 @@ namespace NST_Test_Task.Tests
             functionResult.isTesting = true;
             functionResult.X = 2;
             functionResult.Y = 8;
+            viewModel.SelectedFunctionType = "Линейная";
             viewModel.CoefficientA = 2;
             viewModel.CoefficientB = 8;
             viewModel.SelectedCoefficientC = "2";
-            viewModel.SelectedFunctionType = "Линейная";
+            
 
             // Act
-            double res = functionResult.CalcFunc(1);
-            functionResult.UpdateResult();
+            double res = viewModel.CalcFunc(1, functionResult);
 
 
             // Assert
-            Assert.AreEqual("14", functionResult.Result);
+            Assert.AreEqual("14", res.ToString());
         }
 
         [Test]
@@ -45,14 +45,15 @@ namespace NST_Test_Task.Tests
             functionResult.isTesting = true;
             functionResult.X = 2;
             functionResult.Y = 6;
+            viewModel.SelectedFunctionType = "Квадратичная";
             viewModel.CoefficientA = 2;
             viewModel.CoefficientB = 8;
-            viewModel.SelectedFunctionType = "Квадратичная";
-            viewModel.SelectedCoefficientC = "20";
             
+            viewModel.SelectedCoefficientC = "20";
+
 
             // Act
-            double res = functionResult.CalcFunc(2);
+            double res = viewModel.CalcFunc(2, functionResult);
 
 
             // Assert
@@ -69,14 +70,15 @@ namespace NST_Test_Task.Tests
             functionResult.isTesting = true;
             functionResult.X = 2;
             functionResult.Y = 6;
+            viewModel.SelectedFunctionType = "Кубическая";
             viewModel.CoefficientA = 2;
             viewModel.CoefficientB = 8;
-            viewModel.SelectedFunctionType = "Кубическая";
+            
             viewModel.SelectedCoefficientC = "200";
 
 
             // Act
-            double res = functionResult.CalcFunc(3);
+            double res = viewModel.CalcFunc(3, functionResult);
 
 
             // Assert
@@ -93,14 +95,14 @@ namespace NST_Test_Task.Tests
             functionResult.isTesting = true;
             functionResult.X = 2;
             functionResult.Y = 6;
+            viewModel.SelectedFunctionType = "4-ой степени";
             viewModel.CoefficientA = 2;
             viewModel.CoefficientB = 8;
-            viewModel.SelectedFunctionType = "4-ой степени";
             viewModel.SelectedCoefficientC = "2000";
 
 
             // Act
-            double res = functionResult.CalcFunc(4);
+            double res = viewModel.CalcFunc(4, functionResult);
 
 
             // Assert
@@ -117,14 +119,14 @@ namespace NST_Test_Task.Tests
             functionResult.isTesting = true;
             functionResult.X = 2;
             functionResult.Y = 6;
+            viewModel.SelectedFunctionType = "5-ой степени";
             viewModel.CoefficientA = 2;
             viewModel.CoefficientB = 8;
-            viewModel.SelectedFunctionType = "4-ой степени";
             viewModel.SelectedCoefficientC = "20000";
 
 
             // Act
-            double res = functionResult.CalcFunc(5);
+            double res = viewModel.CalcFunc(5, functionResult);
 
 
             // Assert

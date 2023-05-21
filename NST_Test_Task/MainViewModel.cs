@@ -19,6 +19,9 @@ namespace NST_Test_Task
         //Поля коэффицентов
         private double coefficientA;
         private double coefficientB;
+        //Массив коэффицентов для каждой функции
+        private double[] _aCoefficents = { 0, 0, 0, 0, 0 };
+        private double[] _bCoefficents = { 0, 0, 0, 0, 0 };
         private string selectedFunctionType;
         private string selectedCoefficientC;
 
@@ -26,6 +29,8 @@ namespace NST_Test_Task
         {
             functionResults = new ObservableCollection<FunctionResult>();
             AddRowCommand = new DelegateCommand(AddRow);
+            SelectedFunctionType = "Линейная";
+            SelectedCoefficientC = "1";
         }
 
         
@@ -43,6 +48,8 @@ namespace NST_Test_Task
             {
                 functionResults = value;
                 RaisePropertyChanged("FunctionResults");
+                GetTypeOfFunction();
+                UpdateResult();
             }
         }
 
@@ -52,8 +59,9 @@ namespace NST_Test_Task
             set
             {
                 coefficientA = value;
-                GetTypeOfFunction();    
+                _aCoefficents[GetTypeOfFunction()-1] = value;    
                 RaisePropertyChanged("CoefficientA");
+                UpdateResult();
             }
         }
 
@@ -64,7 +72,9 @@ namespace NST_Test_Task
             {
                 coefficientB = value;
                 GetTypeOfFunction();
+                _bCoefficents[GetTypeOfFunction() - 1] = value;
                 RaisePropertyChanged("CoefficientB");
+                UpdateResult();
             }
         }
         //Внесение типов функций в ComboBox
@@ -80,6 +90,7 @@ namespace NST_Test_Task
                 UpdateCoefficientCValues();
                 GetTypeOfFunction();
                 RaisePropertyChanged("SelectedFunctionType");
+                UpdateResult();
             }
         }
 
@@ -93,9 +104,9 @@ namespace NST_Test_Task
                 selectedCoefficientC = value;
                 GetTypeOfFunction();
                 RaisePropertyChanged("SelectedCoefficientC");
+                UpdateResult();
             }
         }
-
         public ICommand AddRowCommand { get; }
 
         //Обновляю список коэффицентов C при выборе новой функции
@@ -110,6 +121,8 @@ namespace NST_Test_Task
                 CoefficientCValues.Add("3");
                 CoefficientCValues.Add("4");
                 CoefficientCValues.Add("5");
+                CoefficientA = _aCoefficents[0];
+                CoefficientB = _bCoefficents[0];
             }
             else if (SelectedFunctionType == "Квадратичная")
             {
@@ -118,6 +131,8 @@ namespace NST_Test_Task
                 CoefficientCValues.Add("30");
                 CoefficientCValues.Add("40");
                 CoefficientCValues.Add("50");
+                CoefficientA = _aCoefficents[1];
+                CoefficientB = _bCoefficents[1];
             }
             else if (SelectedFunctionType == "Кубическая")
             {
@@ -126,6 +141,8 @@ namespace NST_Test_Task
                 CoefficientCValues.Add("300");
                 CoefficientCValues.Add("400");
                 CoefficientCValues.Add("500");
+                CoefficientA = _aCoefficents[2];
+                CoefficientB = _bCoefficents[2];
             }
             else if (SelectedFunctionType == "4-ой степени")
             {
@@ -134,6 +151,8 @@ namespace NST_Test_Task
                 CoefficientCValues.Add("3000");
                 CoefficientCValues.Add("4000");
                 CoefficientCValues.Add("5000");
+                CoefficientA = _aCoefficents[3];
+                CoefficientB = _bCoefficents[3];
             }
             else if (SelectedFunctionType == "5-ой степени")
             {
@@ -142,14 +161,14 @@ namespace NST_Test_Task
                 CoefficientCValues.Add("30000");
                 CoefficientCValues.Add("40000");
                 CoefficientCValues.Add("50000");
+                CoefficientA = _aCoefficents[4];
+                CoefficientB = _bCoefficents[4];
             }
         }
         //Возвращаю степень функции
         public int GetTypeOfFunction()
         {
 
-            if (double.TryParse(SelectedCoefficientC, out double c))
-            {
                 // Вычислите и обновите значения в соответствии с выбранной функцией
                 if (SelectedFunctionType == "Линейная")
                 {
@@ -171,9 +190,18 @@ namespace NST_Test_Task
                 {
                     return 5;
                 }
-            }
             return 0;
 
+        }
+        public void UpdateResult()
+        {
+            if(functionResults.Count > 0)
+            {
+                foreach(var function in functionResults)
+                {
+                    function.Result = CalcFunc(GetTypeOfFunction(), function).ToString();
+                }
+            }
         }
         //Метод добавления новой строки
         private void AddRow()
@@ -185,16 +213,16 @@ namespace NST_Test_Task
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        private void ChechIsTextboxContainNumeric(string box, string newText)
+        public double CalcFunc(int type, FunctionResult func)
         {
-            if (!IsNumeric(newText))
-            {
-                box = string.Empty;
-            }
+            ParseVariables();
+            return (CoefficientA * Math.Pow(func.X, type)) + (CoefficientB * Math.Pow(func.Y, type - 1)) + c;
         }
-        private bool IsNumeric(string text)
+        //Переменная с коэффицентом C
+        private double c;
+        private void ParseVariables()
         {
-            return int.TryParse(text, out _);
+            double.TryParse(SelectedCoefficientC, out c);
         }
     }
 }
